@@ -1,0 +1,14 @@
+.rounded-image {
+  width: 60%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(26, 9, 9, 0.4);
+  padding: 0.6em;
+  margin-bottom: 1em;
+  transition: 1s;
+  filter: grayscale(0.2);
+}
+.rounded-image:hover {
+  filter: grayscale(0);
+  width: 63%;
+  transform: translateY(-0.3em);
+}
