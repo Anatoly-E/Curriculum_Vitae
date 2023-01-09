@@ -1,5 +1,6 @@
 html {
-  background: url("/img/portfolio.jpg") no-repeat center center;
+  background: url("https://anatoly-e.github.io/img/portfolio.jpg") no-repeat
+    center center;
   min-width: 100%;
   background-size: cover;
   background-position-y: 56px;
