@@ -1,5 +1,5 @@
 html {
-  background: url("/img/portfolio.jpg") no-repeat center center fixed;
+  background: url("img/portfolio.jpg") no-repeat center center fixed;
   min-width: 100%;
   background-size: cover;
   background-position-y: 56px;
