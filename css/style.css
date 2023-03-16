@@ -8,3 +8,7 @@
 .navbar-collapse {
   justify-content: flex-end;
 }
+::-webkit-scrollbar {
+  height: 0px;
+  width: 0;
+}
