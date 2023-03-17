@@ -15,6 +15,10 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -56,15 +60,22 @@
         </div>
       </div>
     </nav>
+    <a href="#bottom" id="top"
+      ><br /><span class="material-symbols-outlined"> expand_more </span></a
+    >
+
     <div class="container text-center my-5">
       <div class="row">
         <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">
+            Привет!<br />
+            Я Анатолий
+          </h1>
           <img
             src="img/profile-photo.jpg"
             class="rounded-image"
             alt="My logo"
           />
-          <h1 class="fw-light">Анатолий Едуш</h1>
           <p class="lead text-muted">
             Мне нравится осваивать веб интерфейсы, учиться разработке, создавать
             интересные приложения. И в этом Резюме я расскажу немного о себе, а
@@ -146,5 +157,19 @@
         </div>
       </div>
     </div>
+    <a href="#top" id="bottom"
+      ><span class="material-symbols-outlined"> arrow_upward </span
+      ><br />Наверх?</a
+    >
+
+    <progress
+      id="page_progress"
+      class="page-progress"
+      value="0"
+      max="100"
+      title="Прогресс прокрутки страницы"
+      aria-hidden="true"
+    ></progress>
+    <script src="./script.js"></script>
   </body>
 </html>
