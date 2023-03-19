@@ -1,7 +1,5 @@
 // Управляем значением value progress
 
-window.addEventListener("scroll", showProgressValue);
-
 function showProgressValue() {
   let scroll = document.body.scrollTop || document.documentElement.scrollTop;
   let height =
@@ -11,6 +9,8 @@ function showProgressValue() {
 
   document.querySelector("#page_progress").value = scrolled;
 }
+
+window.addEventListener("scroll", showProgressValue);
 
 // Создаем плавную прокрутку по ссылке вверх или вниз
 
