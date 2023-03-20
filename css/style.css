@@ -10,7 +10,7 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(26, 9, 9, 0.4);
   padding: 0.6em;
-  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .navbar .container,
@@ -21,7 +21,7 @@ body {
 ::-webkit-scrollbar {
   height: 0px;
   width: 0;
-  appearance: none;
+  -webkit-appearance: none;
 }
 
 .contacts {
