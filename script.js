@@ -34,14 +34,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const imgContainer = document.querySelectorAll(".img-container");
   const scrollAnimationImg = () => {
     imgContainer.forEach((elem) => {
-      let windowBottom = window.innerHeight + window.scrollY;
+      let windowCenter = window.innerHeight / 1.5 + window.scrollY;
       let itemTop = elem.offsetTop;
 
-      windowBottom >= itemTop
-        ? elem.children[0].classList.add("img-show")
-        : elem.children[0].classList.remove("img-show");
+      if (windowCenter >= itemTop) {
+        elem.children[0].classList.add("img-show");
+      }
     });
   };
+
   /** Появление текста под картинками*/
 
   /** Анимация иконок контактов*/
@@ -61,9 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  /** Анимация стрелки  */
-  // scrollAnimationImg();
-  // scrollAnimationContacts();
+  scrollAnimationImg();
+  scrollAnimationContacts();
   window.addEventListener("scroll", () => {
     scrollAnimationImg();
     scrollAnimationContacts();
