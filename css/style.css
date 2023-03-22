@@ -21,7 +21,19 @@ body {
 ::-webkit-scrollbar {
   height: 0px;
   width: 0;
-  -webkit-appearance: none;
+  appearance: none;
+}
+
+.img-hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s ease-in-out 0.3s;
+}
+
+.img-show {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.3s;
 }
 
 .contacts {
@@ -60,6 +72,59 @@ body {
   background-color: rgb(97, 198, 165);
 }
 
+.icon-telegram-hide,
+.icon-github-hide,
+.icon-vk-hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s ease-in-out 0.3s, transform 0.3s;
+}
+
+.icon-telegram-hide {
+  transform: translateX(-50px);
+}
+
+.icon-github-hide {
+}
+
+.icon-vk-hide {
+  transform: translateX(50px);
+}
+
+.icon-telegram-show,
+.icon-github-show,
+.icon-vk-show {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.3s;
+}
+
+.icon-telegram-show {
+  transform: translateX(0);
+}
+
+.icon-github-show {
+  animation-name: jump-github;
+  animation-delay: 0.3s;
+  animation-duration: 0.5s;
+}
+
+@keyframes jump-github {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  from {
+    transform: translateY(0);
+  }
+}
+
+.icon-vk-show {
+  transform: translateX(0);
+}
+
 .page-progress {
   position: fixed;
   top: 0;
@@ -68,7 +133,6 @@ body {
   height: 4px;
   border: none;
   appearance: none;
-  transition: 1s;
 }
 
 .page-progress::-webkit-progress-bar {
@@ -90,5 +154,21 @@ body {
 }
 
 #bottom span {
+  animation-name: jump-arrow-up;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: ease-out; */
   font-size: 2rem;
+}
+
+@keyframes jump-arrow-up {
+  from {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  from {
+    transform: translateY(0);
+  }
 }
