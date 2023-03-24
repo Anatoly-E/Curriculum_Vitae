@@ -7,6 +7,25 @@ const showProgressValue = () => {
   document.querySelector("#page_progress").value = scrolled;
 };
 
+// Анимация <<двойная стрелочка <-> Контакты>>
+
+const arrowText = document.querySelector(".skip-bottom a span");
+const arrowTextContainer = document.querySelector(".skip-bottom a");
+const changeArrowToContacts = () => {
+  arrowTextContainer.style.width = "200px";
+  arrowText.textContent = "Мои контакты";
+  arrowText.style.animation = "none";
+  arrowText.style.color = "rgb(161, 215, 253)";
+};
+const changeContactsToArrow = () => {
+  arrowTextContainer.style.width = "60px";
+  arrowText.textContent = "keyboard_double_arrow_down";
+  arrowText.style.animation = "infinite ease-in-out 3s blinking-arrow";
+  arrowText.style.color = "rgb(91, 154, 199)";
+};
+arrowTextContainer.addEventListener("mouseover", changeArrowToContacts);
+arrowTextContainer.addEventListener("mouseout", changeContactsToArrow);
+
 // Плавная прокрутка по ссылке вверх или вниз
 
 const anchors = document.querySelectorAll('a[href*="#"]');
@@ -26,7 +45,6 @@ for (let anchor of anchors) {
 const loadAnimationText = () => {
   const hello = document.querySelector(".greeting-text h1");
   const helloName = document.querySelector(".greeting-text h2");
-  console.log(hello);
   setTimeout(() => {
     hello.classList.add("hello-show");
     helloName.classList.add("hello-name-show");

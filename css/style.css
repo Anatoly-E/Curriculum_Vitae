@@ -1,5 +1,51 @@
 body {
   text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.skip-bottom {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.skip-bottom a {
+  overflow: hidden;
+  background-color: rgb(16, 65, 101);
+  width: 60px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(91, 154, 199);
+  transition: width 0.3s;
+}
+
+.skip-bottom a span {
+  animation: infinite ease-in-out 3s blinking-arrow;
+}
+
+@keyframes blinking-arrow {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes textArrowShow {
+  from {
+    transform: translateX(100);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .hello-hide {
@@ -152,23 +198,6 @@ body {
   transform: translateX(0);
 }
 
-#top {
-  animation: 2s ease-in-out infinite blinking-arrow;
-  color: rgb(16, 65, 101);
-}
-
-@keyframes blinking-arrow {
-  from {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 #bottom {
   color: rgb(16, 65, 101);
   text-decoration: none;
@@ -209,5 +238,5 @@ body {
 }
 
 .page-progress::-webkit-progress-value {
-  background: rgba(5, 5, 6, 0.8);
+  background: rgba(16, 65, 101, 0.8);
 }
