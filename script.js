@@ -57,10 +57,15 @@ const imgContainer = document.querySelectorAll(".img-container");
 const scrollAnimationImg = () => {
   imgContainer.forEach(elem => {
     let windowCenter = window.innerHeight / 1.5 + window.scrollY;
+    let windowTop = window.innerHeight / 30 + window.scrollY;
     let itemTop = elem.offsetTop;
-
-    if (windowCenter >= itemTop) {
+    let itemBottom = elem.offsetTop + elem.offsetHeight / 2;
+    console.log(itemBottom);
+    if (windowCenter >= itemTop && windowTop <= itemBottom) {
       elem.children[0].classList.add("img-show");
+    } else {
+      elem.children[0].classList.remove("img-show");
+      elem.children[0].classList.add("img-hide");
     }
   });
 };
