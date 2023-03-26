@@ -24,11 +24,11 @@ for (let anchor of anchors) {
 // Анимация текста приветствия при загрузке страницы
 
 const loadAnimationText = () => {
-  const hello = document.querySelector(".greeting-text h1");
-  const helloName = document.querySelector(".greeting-text h2");
+  const hello = document.querySelector(".greeting h1");
+  const helloName = document.querySelector(".greeting h2");
   setTimeout(() => {
-    hello.classList.add("hello-show");
-    helloName.classList.add("hello-name-show");
+    hello.classList.add("greeting-hello-show");
+    helloName.classList.add("greeting-hello-name-show");
   }, 1000);
 };
 
@@ -41,7 +41,6 @@ const scrollAnimationImg = () => {
     let windowTop = window.innerHeight / 30 + window.scrollY;
     let itemTop = elem.offsetTop;
     let itemBottom = elem.offsetTop + elem.offsetHeight / 2;
-    console.log(itemBottom);
     if (windowCenter >= itemTop && windowTop <= itemBottom) {
       elem.children[0].classList.add("img-show");
     } else {
