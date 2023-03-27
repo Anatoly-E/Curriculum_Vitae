@@ -310,22 +310,16 @@ footer a {
   .rounded-image {
     width: 30%;
   }
-  .card-container {
-    grid-template-columns: repeat(3, 300px);
-  }
 }
 
 @media (min-width: 1200px) {
   .card-container {
-    grid-template-columns: repeat(3, 350px);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 1400px) {
   .rounded-image {
     width: 25%;
-  }
-  .card-container {
-    grid-template-columns: repeat(3, 400px);
   }
 }
