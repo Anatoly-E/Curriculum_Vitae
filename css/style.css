@@ -8,9 +8,10 @@
 }
 
 .skip-bottom {
+  width: 100%;
   height: 5rem;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
   align-items: center;
   background-color: rgb(16, 65, 101);
 }
