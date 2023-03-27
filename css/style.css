@@ -106,15 +106,17 @@
 }
 
 .card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
 }
 
 .img-container {
   overflow: hidden;
-  width: 90%;
-  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem 4rem;
 }
 
 .img-item {
@@ -132,6 +134,10 @@
   visibility: visible;
 }
 
+.card-body {
+  padding: 0 1rem;
+}
+
 .card-title {
   font-weight: 400;
   font-size: 2rem;
@@ -139,8 +145,9 @@
 }
 
 .card-text {
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.8rem;
+  white-space: pre-line;
 }
 
 .contacts {
@@ -284,12 +291,19 @@ footer a {
   .rounded-image {
     width: 50%;
   }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .rounded-image {
     width: 40%;
+  }
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -298,20 +312,24 @@ footer a {
   .rounded-image {
     width: 30%;
   }
+  .card-container {
+    grid-template-columns: repeat(3, 300px);
+  }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  /* .box {
-    width: 1100px;
-    background-color: rgb(114, 29, 29);
-    font-size: 5.5em;
-  } */
+  .card-container {
+    grid-template-columns: repeat(3, 350px);
+  }
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
   .rounded-image {
     width: 25%;
+  }
+  .card-container {
+    grid-template-columns: repeat(3, 400px);
   }
 }
