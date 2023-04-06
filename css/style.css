@@ -11,12 +11,24 @@
   width: 100%;
   height: 5rem;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   background-color: rgb(16, 65, 101);
 }
 
-.skip-bottom a {
+.nav-contacts {
+  display: flex;
+  width: 40vw;
+  justify-content: space-evenly;
+}
+.nav-contacts a {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-arrow-to-contacts {
   width: 4rem;
   height: 4rem;
   display: flex;
@@ -25,7 +37,7 @@
   text-decoration: none;
 }
 
-.skip-bottom a span {
+.nav-arrow-to-contacts span {
   color: rgb(91, 154, 199);
   animation: infinite ease-in-out 3s blinking-arrow;
   font-size: 3rem;
@@ -59,7 +71,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-30px);
-  font-weight: 200;
+  font-weight: 300;
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
@@ -75,7 +87,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  font-weight: 200;
+  font-weight: 400;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
@@ -95,8 +107,13 @@
   margin-bottom: 2rem;
 }
 
+.greeting-head-text {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
 .greeting-text {
-  font-weight: 200;
+  font-weight: 400;
   font-size: 2rem;
   margin-bottom: 6rem;
 }
@@ -147,10 +164,16 @@
   margin-bottom: 1rem;
 }
 
+.card-title-lang {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 .card-text {
   font-weight: 300;
   font-size: 1.8rem;
-  white-space: pre-line;
+  /* white-space: pre-line; */
 }
 
 .contacts {
@@ -294,9 +317,8 @@ footer a {
   .rounded-image {
     width: 50%;
   }
-
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
+  .nav-contacts {
+    width: 30vw;
   }
 }
 
@@ -304,22 +326,102 @@ footer a {
   .rounded-image {
     width: 40%;
   }
+  .img-item {
+    width: 80vw;
+  }
+  .card-title,
+  .card-title-lang {
+    font-size: 2.2rem;
+  }
+  .card-text {
+    font-size: 2rem;
+  }
+  #bottom {
+    font-size: 2rem;
+  }
+  #bottom span {
+    font-size: 3.5rem;
+  }
+  .nav-contacts {
+    width: 25vw;
+  }
 }
 
 @media (min-width: 992px) {
   .rounded-image {
     width: 30%;
   }
+  .greeting-about-me {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .img-container:nth-child(2n) {
+    flex-direction: row;
+    text-align: right;
+  }
+  .img-container:nth-child(2n + 1) {
+    flex-direction: row-reverse;
+  }
+  .img-item {
+    width: 40vw;
+  }
+  .card-title,
+  .card-title-lang {
+    font-size: 2.5rem;
+  }
+  .card-text {
+    font-size: 2.2rem;
+  }
+  .nav-contacts {
+    width: 20vw;
+  }
+  .nav-contacts a {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 1200px) {
-  .card-container {
-    grid-template-columns: repeat(3, 1fr);
+  .greeting-hello-hide {
+    font-size: 4rem;
+  }
+  .greeting-hello-name-hide {
+    font-size: 3rem;
+  }
+  .greeting-head-text {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .greeting-text {
+    font-size: 2.5rem;
+    margin-bottom: 7rem;
+  }
+  .card-title,
+  .card-title-lang {
+    font-size: 3rem;
+  }
+  .card-text {
+    font-size: 2.5rem;
+  }
+  #bottom {
+    font-size: 2.5rem;
+  }
+  #bottom span {
+    font-size: 4rem;
+  }
+  .nav-contacts {
+    width: 18vw;
   }
 }
 
 @media (min-width: 1400px) {
-  .rounded-image {
-    width: 25%;
+  .greeting-hello-hide {
+    font-size: 4.5rem;
+  }
+  .greeting-hello-name-hide {
+    font-size: 3.5rem;
+  }
+  .nav-contacts {
+    width: 15vw;
   }
 }
