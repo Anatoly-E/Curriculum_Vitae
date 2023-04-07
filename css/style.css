@@ -21,6 +21,7 @@
   display: flex;
   width: 40vw;
   justify-content: space-evenly;
+  list-style: none;
 }
 .nav-contacts a {
   font-size: 1.5rem;
@@ -70,7 +71,7 @@
 .greeting-hello-hide {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-30px);
+  transform: translateY(-8rem);
   font-weight: 300;
   font-size: 3.5rem;
   margin-bottom: 1rem;
@@ -80,13 +81,13 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0px);
-  transition: opacity 3s, transform 3s;
+  transition: opacity 1s, transform 0.5s;
 }
 
 .greeting-hello-name-hide {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
+  transform: translateY(2rem);
   font-weight: 400;
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -96,7 +97,7 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  transition: opacity 2s ease-in-out 2s, transform 2s ease-in-out 2s;
+  transition: opacity 0.5s ease-in-out 1.5s, transform 0.5s ease-in-out 1.5s;
 }
 
 .rounded-image {
@@ -305,6 +306,7 @@
 footer {
   display: flex;
   justify-content: center;
+  padding-bottom: 3rem;
 }
 
 footer a {
